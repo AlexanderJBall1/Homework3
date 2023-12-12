@@ -22,6 +22,9 @@
           <a class="nav-link" href="Teams.php">Teams</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="players-on-teams.php">Player Teams</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="Coaches.php">Coaches</a>
         </li>
       </ul>
