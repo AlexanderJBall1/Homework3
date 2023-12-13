@@ -9,7 +9,7 @@
     </thead>
     <tbody>
 <?php
-while ($player = $playeronteams->fetch_assoc()){
+while ($player = $playerteams->fetch_assoc()){
 ?>
   <tr>
     <td><?php echo $player['Player_ID']; ?></td>
