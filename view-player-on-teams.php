@@ -9,7 +9,6 @@
     </thead>
     <tbody>
 <?php
-  $playeronteams = selectPlayerOnTeams($team['Team_ID']);
 while ($player = $playeronteams->fetch_assoc()){
 ?>
   <tr>
