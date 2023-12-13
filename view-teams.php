@@ -18,6 +18,12 @@
       <th></th>
       <th></th>
       <th></th>
+      <td>
+      <form method = "get" action = "player-teams.php">
+        <input type = "hidden" name = "pid" value = "<?php echo $player['Player_ID']; ?>">
+        <button type = "submit" class = "btn btn-primary">Player Info</button>
+      </form>
+    </td>
     </thead>
     <tbody>
 <?php
