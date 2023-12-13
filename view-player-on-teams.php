@@ -23,6 +23,5 @@ while ($player = $playerteams->fetch_assoc()){
     </tbody>
   </table>
 </div>
-?>
 
 </div>
