@@ -18,12 +18,6 @@
       <th></th>
       <th></th>
       <th></th>
-      <td>
-      <form method = "get" action = "player-teams.php">
-        <input type = "hidden" name = "pid" value = "<?php echo $player['Player_ID']; ?>">
-        <button type = "submit" class = "btn btn-primary">Player Info</button>
-      </form>
-    </td>
     </thead>
     <tbody>
 <?php
@@ -34,6 +28,11 @@ while ($team = $teams->fetch_assoc()){
     <td><?php echo $team['City']; ?></td>
     <td><?php echo $team['Name']; ?></td>
     <td>
+      <form method = "get" action = "player-teams.php">
+        <input type = "hidden" name = "pid" value = "<?php echo $player['Player_ID']; ?>">
+        <button type = "submit" class = "btn btn-primary">Player Info</button>
+      </form>
+    </td>
   <?php
     include "view-teams-editform.php";
   ?>
