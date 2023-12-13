@@ -1,30 +1,29 @@
-<h1>Players on Team</h1>
-<div class="card-group">
+<h1>Player On Teams</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Years</th>
+    </thead>
+    <tbody>
 <?php
-while ($team = $teams->fetch_assoc()){
+  $playeronteams = selectPlayerOnTeams($team['Team_ID']);
+while ($player = $playeronteams->fetch_assoc()){
 ?>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><?php echo $team['Name']; ?></h5>
-      <p class="card-text">
-      <ul class="list-group">
-<?php
- $playeronteams = selectPlayerOnTeams($team['Team_ID']);
-while($player = $playeronteams->fetch_assoc()){
-?>
-    <li class="list-group-item"><?php echo $player['Player_Name']; ?> - <?php echo $player['Salary']; ?> - <?php echo $player['Years']; ?></li>
-
+  <tr>
+    <td><?php echo $player['Player_ID']; ?></td>
+    <td><?php echo $player['Player_Name']; ?></td>
+    <td><?php echo $player['Salary']; ?></td>
+    <td><?php echo $player['Years']; ?></td>
+  </tr>
 <?php
 }
 ?>
-
-        </ul>
-      </p>
-    </div>
-  </div>
+    </tbody>
+  </table>
 </div>
-<?php
-}
 ?>
 
 </div>
