@@ -28,7 +28,7 @@ while ($team = $teams->fetch_assoc()){
     <td><?php echo $team['City']; ?></td>
     <td><?php echo $team['Name']; ?></td>
     <td>
-      <form method = "get" action = "player-teams.php">
+      <form method = "post" action = "player-teams.php">
         <input type = "hidden" name = "tid" value = "<?php echo $team['Team_ID']; ?>">
         <button type = "submit" class = "btn btn-primary">Players on Team</button>
       </form>
